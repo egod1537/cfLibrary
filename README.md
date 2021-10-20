@@ -18,7 +18,7 @@
 - Union Find with Rollback 
 - Treap
 
-  ## Math
+## Math
 
 - Prime Number
 - Pow, Factor, Divisor, Inverse Modular
