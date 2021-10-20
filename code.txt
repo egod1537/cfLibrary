@@ -1,0 +1,60 @@
+#pragma GCC optimize("O3")
+#pragma GCC optimize("Ofast")
+#pragma GCC optimization("unroll-loops")
+#pragma GCC target("avx,avx2,fma")
+
+#include <bits/stdc++.h>
+#include <unordered_map>
+#include <random>
+using namespace std;
+#define all(x) x.begin(), x.end()
+#define sz(x) ((int)x.size())
+#define debug(x) cout << (#x) << " " << x << "\n";
+#define compress(x) sort(all(x)); x.erase(unique(all(x)), x.end());
+typedef long double ld;
+typedef long long ll;
+typedef unsigned uint;
+typedef unsigned long long ull;
+typedef pair<int, int> pi;
+typedef pair<ll, ll> pll;
+#define fi first
+#define se second
+int dx4[4] = { 1, 0, -1, 0 };
+int dy4[4] = { 0, 1, 0, -1 };
+int dx8[8] = { -1, -1, 0, 1, 1, 1, 0, -1 };
+int dy8[8] = { 0, 1, 1, 1, 0, -1, -1, -1 };
+typedef complex<double> base;
+const double PI = acos(-1);
+
+template<typename T>
+pair<T, T> operator+(const pair<T, T>& a, const pair<T, T>& b) { return pi(a.fi + b.fi, a.se + b.se); }
+template<typename T>
+pair<T,T> operator-(const pair<T, T>& a, const pair<T, T>& b) {return pi(a.fi - b.fi, a.se - b.se);}
+template<typename T>
+pair<T, T> operator*(const pair<T, T>& a, ll b) {return pi(a.fi * b, a.se * b);}
+template<typename T>
+ostream& operator<<(ostream& os, pair<T,T> p) {
+	os << "(" << p.fi << ", " << p.second << ")";
+	return os;
+}
+template<typename T>
+ostream& operator<<(ostream& os, vector<T>& vec) {
+	for (T w : vec) os << w << " ";
+	return os;
+}
+ll ccw(pi a, pi b, pi c) {return (b.fi - a.fi) * (c.se - a.se) - (c.fi - a.fi) * (b.se - a.se);}
+ll gcd(ll a, ll b) { return (!b ? a : gcd(b, a % b)); }
+ll lcm(ll a, ll b) { return a * b / gcd(a, b); }
+
+ll mypow(ll x, ll cnt) {
+	if (!cnt) return 1;
+	ll mid = mypow(x, cnt / 2);
+	return mid * mid * (cnt % 2 ? x : 1);
+}
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0), cout.tie(0);
+
+	return 0;
+}
