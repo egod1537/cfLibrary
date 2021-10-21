@@ -13,5 +13,46 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Data Structure">
+      <UniqueIdentifier>{a9b36e90-9047-4ae1-86cb-16327d555aeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Math">
+      <UniqueIdentifier>{14314846-adec-49bd-b49e-3e66fa1afb20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Graph">
+      <UniqueIdentifier>{406da0ae-71c5-45aa-aa07-3a33ed9a3e50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rmmq_seg.cpp">
+      <Filter>소스 파일\Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="sum_seg.cpp">
+      <Filter>소스 파일\Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="sumlazy_seg.cpp">
+      <Filter>소스 파일\Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="fastio.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="numbertheory.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="unionFind.cpp">
+      <Filter>소스 파일\Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="fenwick.cpp">
+      <Filter>소스 파일\Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="lazy_fenwick.cpp">
+      <Filter>소스 파일\Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="fft.cpp">
+      <Filter>소스 파일\Math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
