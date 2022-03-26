@@ -1,5 +1,5 @@
 # cfLibrary
-  Codeforces에서 사용할 알고리즘을 작성해놓은 저장소 입니다.
+  Codeforces에서 사용할 알고리즘을 작성해놓은 저장소 입니다. 아래는 나중에 정리해놓을 알고리즘 목록입니다.
 
 Fastio
 

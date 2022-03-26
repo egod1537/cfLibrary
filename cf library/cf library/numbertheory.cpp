@@ -1,3 +1,7 @@
+#define NUMBER 100000
+
+ll phi[NUMBER+1], low[NUMBER+1];
+
 ll mtrand(ll min, ll max) {
 	random_device rd;
 	mt19937 mt(rd());
@@ -50,4 +54,26 @@ ll fibo(ll x, ll mod = 0) {
 	mat.mat = { {1, 1}, {1, 0} };
 	mat = mypow(mat, x, mod);
 	return mat[0][1];
+}
+ll fact(ll x) {
+	ll ans = 1;
+	for (ll i = 2; i <= x; i++) ans *= i;
+	return ans;
+}
+
+void Init() {
+	phi[1] = 1;
+	for (int i = 2; i <= NUMBER; i++) {
+		for (int j = i; j <= NUMBER; j += i) {
+			if (!low[j]) low[j] = i;
+		}
+		phi[i] = i;
+		for (int j = i; j != 1; ) {
+			int p = low[j];
+			while (j % p == 0) {
+				j /= p;
+			}
+			phi[i] = (1ll * phi[i] * (p - 1)) / p;
+		}
+	}
 }

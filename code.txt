@@ -3,14 +3,18 @@
 #pragma GCC optimization("unroll-loops")
 #pragma GCC target("avx,avx2,fma")
 
+//https://github.com/egod1537/cfLibrary
+
 #include <bits/stdc++.h>
 #include <unordered_map>
 #include <random>
 using namespace std;
 #define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
 #define sz(x) ((int)x.size())
 #define debug(x) cout << (#x) << " " << x << "\n";
 #define compress(x) sort(all(x)); x.erase(unique(all(x)), x.end());
+#define rev(x) reverse(x.begin(), x.end())
 typedef long double ld;
 typedef long long ll;
 typedef unsigned uint;
@@ -52,9 +56,16 @@ ll mypow(ll x, ll cnt) {
 	return mid * mid * (cnt % 2 ? x : 1);
 }
 
+void solve(){
+
+}
+
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0), cout.tie(0);
+
+	int tc = 1;
+	while(tc--) solve();
 
 	return 0;
 }
