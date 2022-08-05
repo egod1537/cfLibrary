@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EdmondKarp.cpp" />
+    <ClCompile Include="EdmondsKarp.cpp" />
     <ClCompile Include="fastio.cpp" />
     <ClCompile Include="fenwick.cpp" />
     <ClCompile Include="fft.cpp" />

@@ -54,7 +54,7 @@
     <ClCompile Include="fft.cpp">
       <Filter>소스 파일\Math</Filter>
     </ClCompile>
-    <ClCompile Include="EdmondKarp.cpp">
+    <ClCompile Include="EdmondsKarp.cpp">
       <Filter>소스 파일\Graph</Filter>
     </ClCompile>
   </ItemGroup>

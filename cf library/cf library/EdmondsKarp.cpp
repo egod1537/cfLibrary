@@ -1,4 +1,4 @@
-struct EdmondKarp {
+struct EdmondsKarp {
 	struct Edge {
 		int to, cap, f;
 		Edge* dual;
