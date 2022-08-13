@@ -1,13 +1,11 @@
 struct EdmondsKarp {
 	struct Edge {
 		int to, cap, f;
-		Edge* dual;
+		int dual;
 		int spare() { return cap - f; }
-		void addflow(int x) { f += x; dual->f -= x; }
-		void addcapacity(int x) { cap += x; dual->cap += x; }
 	};
 	int n, ans;
-	vector<list<Edge>> E;
+	vector<vector<Edge>> E;
 	void init(int _n) {
 		n = _n;
 		E.clear();  E.resize(n);
@@ -15,8 +13,8 @@ struct EdmondsKarp {
 	void add_edge(int u, int v, int cap) {
 		E[u].push_back({ v,cap, 0 });
 		E[v].push_back({ u, 0, 0 });
-		E[u].back().dual = &E[v].back();
-		E[v].back().dual = &E[u].back();
+		E[u].back().dual = E[v].size() - 1;
+		E[v].back().dual = E[u].size() - 1;;
 	}
 	Edge* GetEdge(int u, int v) {
 		for (auto& e : E[u])
@@ -42,8 +40,10 @@ struct EdmondsKarp {
 		if (apply) {
 			int flow = 1e9;
 			for (int i = t; i != s; i = prv[i]) flow = min(flow, sel[i]->spare());
-			for (int i = t; i != s; i = prv[i])
-				sel[i]->addflow(flow);
+			for (int i = t; i != s; i = prv[i]) {
+				sel[i]->f += flow;
+				E[sel[i]->to][sel[i]->dual].f -= flow;
+			}
 			ans += flow;
 		}
 		return true;

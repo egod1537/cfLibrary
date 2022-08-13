@@ -37,14 +37,12 @@ pair<T, T> operator-(const pair<T, T>& a, const pair<T, T>& b) { return pi(a.fi 
 template<typename T>
 pair<T, T> operator*(const pair<T, T>& a, ll b) { return pi(a.fi * b, a.se * b); }
 template<typename T>
-ostream& operator<<(ostream& os, pair<T, T> p)
-{
+ostream& operator<<(ostream& os, pair<T, T> p) {
 	os << "(" << p.fi << ", " << p.second << ")";
 	return os;
 }
 template<typename T>
-ostream& operator<<(ostream& os, vector<T>& vec)
-{
+ostream& operator<<(ostream& os, vector<T>& vec) {
 	for (T w : vec) os << w << " ";
 	return os;
 }
@@ -52,25 +50,24 @@ ll ccw(pi a, pi b, pi c) { return (b.fi - a.fi) * (c.se - a.se) - (c.fi - a.fi) 
 ll gcd(ll a, ll b) { return (!b ? a : gcd(b, a % b)); }
 ll lcm(ll a, ll b) { return a * b / gcd(a, b); }
 
-ll mypow(ll x, ll cnt)
-{
+ll mypow(ll x, ll cnt) {
 	if (!cnt) return 1;
 	ll mid = mypow(x, cnt / 2);
 	return mid * mid * (cnt % 2 ? x : 1);
 }
 
-void solve()
-{
+void solve() {
 
 }
 
-int main()
-{
+int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0), cout.tie(0);
 
 	int tc = 1;
-	while(tc--) solve();
+	for (int i = 1; i <= tc; i++) {
+		solve();
+	}
 
 	return 0;
 }

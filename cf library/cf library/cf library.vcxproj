@@ -145,6 +145,7 @@
     <ClCompile Include="fft.cpp" />
     <ClCompile Include="lazy_fenwick.cpp" />
     <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="mcmf.cpp" />
     <ClCompile Include="numbertheory.cpp" />
     <ClCompile Include="rmmq_seg.cpp" />
     <ClCompile Include="sumlazy_seg.cpp" />
