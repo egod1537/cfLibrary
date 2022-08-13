@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dinic.cpp" />
     <ClCompile Include="EdmondsKarp.cpp" />
     <ClCompile Include="fastio.cpp" />
     <ClCompile Include="fenwick.cpp" />

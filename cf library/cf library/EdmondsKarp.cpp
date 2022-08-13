@@ -1,25 +1,23 @@
+template<typename T>
 struct EdmondsKarp {
 	struct Edge {
-		int to, cap, f;
+		int to;
+		T cap, f;
 		int dual;
-		int spare() { return cap - f; }
+		T spare() { return cap - f; }
 	};
-	int n, ans;
+	int n;
+	T ans;
 	vector<vector<Edge>> E;
 	void init(int _n) {
 		n = _n;
 		E.clear();  E.resize(n);
 	}
-	void add_edge(int u, int v, int cap) {
+	void add_edge(int u, int v, T cap) {
 		E[u].push_back({ v,cap, 0 });
 		E[v].push_back({ u, 0, 0 });
 		E[u].back().dual = E[v].size() - 1;
 		E[v].back().dual = E[u].size() - 1;;
-	}
-	Edge* GetEdge(int u, int v) {
-		for (auto& e : E[u])
-			if (e.to == v) return &e;
-		return nullptr;
 	}
 	bool bfs(int s, int t, bool apply = true) {
 		vector<int> prv(n, -1);
@@ -38,7 +36,7 @@ struct EdmondsKarp {
 		}
 		if (prv[t] == -1) return false;
 		if (apply) {
-			int flow = 1e9;
+			T flow = 1e9;
 			for (int i = t; i != s; i = prv[i]) flow = min(flow, sel[i]->spare());
 			for (int i = t; i != s; i = prv[i]) {
 				sel[i]->f += flow;
@@ -48,7 +46,7 @@ struct EdmondsKarp {
 		}
 		return true;
 	}
-	int flow(int s, int t) {
+	T flow(int s, int t) {
 		ans = 0;
 		while (bfs(s, t));
 		return ans;
