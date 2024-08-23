@@ -1,3 +1,5 @@
+// https://github.com/egod1537/cfLibrary
+
 #pragma GCC optimize("O3")
 #pragma GCC optimize("Ofast,unroll-loops")
 #pragma GCC target("avx2,popcnt")
